@@ -1,14 +1,14 @@
 const express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://MainUser:Password1!@cluster0.tlzgv.mongodb.net/PostBoard?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://MainUser:Password1!@cluster0.tlzgv.mongodb.net/PostBoard?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 
 /* GET home page. */
