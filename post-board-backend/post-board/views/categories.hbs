@@ -1,0 +1,11 @@
+<h1>Browse our categories!</h1>
+
+<ul>
+    {{#each categories}}
+    <h3>{{title}}</h3><br>
+    <p>{{description}}</p>
+    <a href="/category/{{title}}"></a>
+    {{/each}}
+</ul>
+
+<a href="/createCategory">Can't find the category you're looking for? Let's make it!</a>
