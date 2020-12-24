@@ -10,8 +10,8 @@ router.get('/categories', function(req,res,next){
         res.json({
           posts: post,
           success: "found post"
-        })
-      })
+        });
+      });
 });
 
 //we need to get the json object from a form in the front end
