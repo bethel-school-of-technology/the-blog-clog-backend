@@ -6,12 +6,12 @@ var posts = require('../models/posts');
 //need route that renders all category titles, descriptions, and a link to the site on one page
 router.get('/categories', function(req,res,next){
   categories.find({})
-  .then(post=> {
+  .then(categories=> {
         res.json({
-          posts: post,
-          success: "found post"
-        });
-      });
+          category: categories,
+          success: "found all categories"
+        })
+      })
 });
 
 //we need to get the json object from a form in the front end
