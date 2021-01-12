@@ -69,10 +69,20 @@ router.get('/:category', function(req, res, next) {
       posts.find({}).where("category").equals(req.params.category)
       .then(post=> {
         res.json({
-          posts: post,
-          success: "found post"
+          category: post,
+          success: "found category"
         })
       })
     });
+
+    router.get('/search/:term', function(req, res, next) {
+        categories.find({ title: { $regex: ("^" + (req.params.term), "po")} })
+        .then(post=> {
+          res.json({
+            results: post,
+            success: "found searches"
+          })
+        })
+      });
 
  module.exports = router;
