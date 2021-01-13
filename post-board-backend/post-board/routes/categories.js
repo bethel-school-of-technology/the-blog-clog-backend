@@ -70,7 +70,7 @@ router.get('/:category', function(req, res, next) {
       .then(post=> {
         res.json({
           category: post,
-          success: "found category"
+          success: "found posts"
         })
       })
     });
