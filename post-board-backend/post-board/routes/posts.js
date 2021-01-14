@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var posts = require('../models/posts');
 var categories = require('../models/categories');
-
+var myDate = new Date();
 
 router.post('/post', (req, res, next) => {
   console.log(req.body);
@@ -43,7 +43,8 @@ router.post('/:category', (req, res, next) => {
       let newPost = new posts({
         header: req.body.header,
         content: req.body.content,
-        category: (req.params.category)
+        category: (req.params.category),
+        date: req.body.myDate
       });
       newPost.save(function (err) {
         if (err) {
