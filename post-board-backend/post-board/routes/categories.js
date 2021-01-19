@@ -65,6 +65,7 @@ router.post('/createCategory', (req, res, next) => {
 
   /* GET home page. */
 
+// This should work for the buttons on the categories
 router.get('/:category', function(req, res, next) {
       posts.find({}).where("category").equals(req.params.category)
       .then(post=> {
